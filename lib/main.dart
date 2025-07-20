@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 import 'screens/account_page.dart';
 import 'screens/home_page.dart';
+import 'screens/posts_page.dart';         
+import 'screens/fav_posts_page.dart';    
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/account': (context) => AccountPage(),
         '/home': (context) => HomePage(),
+        '/posts': (context) => const PostsPage(),        
+        '/favorites': (context) => const FavPostsPage(), 
       },
     );
   }

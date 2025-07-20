@@ -9,6 +9,7 @@ class CustomDrawer extends StatelessWidget {
     required this.fullName,
     required this.onItemTap,
     required this.onLogout,
+    super.key,
   });
 
   @override
@@ -37,7 +38,13 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
-          Divider(),
+          ListTile(
+            title: Text('Posts'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/posts');
+            },
+          ),
           ListTile(
             title: Text('Logout'),
             onTap: () {

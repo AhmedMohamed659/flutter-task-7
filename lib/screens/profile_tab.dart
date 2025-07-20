@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/task.dart';
+import '../services/favorites_service.dart'; 
 
 class ProfileTab extends StatefulWidget {
   final List<Task> tasks;
 
-  ProfileTab({required this.tasks});
+  const ProfileTab({super.key, required this.tasks});
 
   @override
   State<ProfileTab> createState() => _ProfileTabState();
@@ -62,7 +63,7 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
     return FadeTransition(
       opacity: _animation,
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -80,6 +81,20 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
               title: Text(task.name),
               leading: Icon(Icons.check, color: Colors.green),
             )),
+            SizedBox(height: 30),
+
+            Text(
+              "Favourite Posts: ${FavoritesService.count()}",
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 10),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/favorites');
+              },
+              child: Text("Show Favourites"),
+            ),
           ],
         ),
       ),
