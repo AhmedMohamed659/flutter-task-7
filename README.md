@@ -1,4 +1,4 @@
-# My Flutter App
+# My Flutter App (Ahmed Mohamed Abd Elhamed)
 
 ## سكرين شوت للمشروع 
 
@@ -22,3 +22,20 @@
 
 ### شاشة البروفيل :
 ![Profile Page](screenshots/profile.png)
+
+## التعديلات المطلوبة 
+
+### اضافة تاب جديد المنشورات 
+![Posts in Drawer](screenshots/posts%20in%20drawer.png)
+
+### صفحه المنشورات 
+![Posts Page](screenshots/posts%20page.png)
+
+### البحث في المنشورات 
+![Search in Posts](screenshots/search%20in%20posts.png)
+
+### صفحه المنشورات المفضلة 
+![Favorites Pages](screenshots/fav_posts.png)
+
+### اضافة عدد المنشورات المفضلة و زر للتحويل لصفحتها في الملف الشخصي
+![Add Fav_Posts in Profile](screenshots/add%20fav_post%20in%20profile.png)
